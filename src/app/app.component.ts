@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CounterService } from './counter.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(private counterService: CounterService){
+
+  }
+
+  resetCounter(){
+    this.counterService.resetCounter();
+  }
   title = 'counters';
+ 
+
 }
