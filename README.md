@@ -1,5 +1,5 @@
 # Counters
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/93fec778-099b-4df5-b9d2-97026a755472/deploy-status)](https://app.netlify.com/sites/eloquent-kowalevski-1a9c74/deploys)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12.
 
 ## Development server
