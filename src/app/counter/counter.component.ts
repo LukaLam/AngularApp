@@ -28,6 +28,7 @@ export class CounterComponent implements OnInit {
    if(this.position+41 === 43){ // obliger de faire ce truc moche, car il n'y a pas de compteur 3, juste 43/44/45
     this.counterService.increment().subscribe(counter => this.value = counter);
   }
+  
   }
 
 }
