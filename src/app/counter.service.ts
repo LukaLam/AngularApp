@@ -25,11 +25,11 @@ export class CounterService {
 
   increment(): Observable<Counter>{
     //this.httpClient.patch<Counter>("https://lp4asgadot.herokuapp.com/counters/2.json",{"value" : 1});
-    this.httpClient.patch("https://lp4asgadot.herokuapp.com/counters/43.json",{"value" : 1}).subscribe();
-    return this.httpClient.get<Counter>("https://lp4asgadot.herokuapp.com/counters/43.json");
+    this.httpClient.patch("https://lp4asgadot.herokuapp.com/counters/47.json",{"value" : 1}).subscribe();
+    return this.httpClient.get<Counter>("https://lp4asgadot.herokuapp.com/counters/47.json");
   }
 
   getCounterValue(id: number): Observable<Counter> {
-    return this.httpClient.get<Counter>("https://lp4asgadot.herokuapp.com/counters/"+(id+46)+".json")  // comme dans l'autre fichier, il n'y a pas de compteur numéro 3, uniquement 43/44 ou 45, donc j'incrémente le 43eme
+    return this.httpClient.get<Counter>("https://lp4asgadot.herokuapp.com/counters/"+(id+45)+".json")  // comme dans l'autre fichier, il n'y a pas de compteur numéro 3, uniquement 43/44 ou 45, donc j'incrémente le 43eme
   }
 }
