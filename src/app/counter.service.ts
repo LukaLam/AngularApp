@@ -30,6 +30,6 @@ export class CounterService {
   }
 
   getCounterValue(id: number): Observable<Counter> {
-    return this.httpClient.get<Counter>("https://lp4asgadot.herokuapp.com/counters/"+(id+41)+".json")  // comme dans l'autre fichier, il n'y a pas de compteur numéro 3, uniquement 43/44 ou 45, donc j'incrémente le 43eme
+    return this.httpClient.get<Counter>("https://lp4asgadot.herokuapp.com/counters/"+(id+46)+".json")  // comme dans l'autre fichier, il n'y a pas de compteur numéro 3, uniquement 43/44 ou 45, donc j'incrémente le 43eme
   }
 }
