@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { CounterService } from '../counter.service';
 import { Observable } from 'rxjs';
 import { Counter } from '../counter';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-counter',
@@ -10,25 +11,34 @@ import { Counter } from '../counter';
 })
 export class CounterComponent implements OnInit {
 
-  title = "compteur 1"
-  @Input() position :number;
+  counter: Counter = new Counter();
 
-  value: Counter;
-
-  constructor( public counterService: CounterService ) { 
-    
-  }
+  constructor(
+    public counterService: CounterService,
+    private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.counterService.getCounterValue(this.position).subscribe(counter => this.value= counter);
+    this.route.params.subscribe(
+      () => {
+        this.getCounter();
+      }
+    )
   }
 
-  increment() {
-   // this.counterService.increment(this.position); 
-   if(this.position+45 === 47){ // obliger de faire ce truc moche, car il n'y a pas de compteur 3, juste 43/44/45
-    this.counterService.increment().subscribe(counter => this.value = counter);
+  getCounter() {
+    this.counter.id = +this.route.snapshot.paramMap.get('id'); 
+    this.counterService.getCounter(this.counter.id)
+      .subscribe(counter => {
+        this.counter = counter;
+      });
   }
-  
+
+
+  increment() {
+    this.counterService.increment(this.counter.id)
+      .subscribe(counter => {
+        this.counter.value = counter.value;
+      });
   }
 
 }

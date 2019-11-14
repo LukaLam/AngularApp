@@ -1,7 +1,14 @@
-.card{
-    margin-bottom: 10px;
+.head {
+    margin-bottom: 30px;
+    
 }
 
-spaced {
-    margin-bottom: 1em;
-} 
+.cards {
+    text-align: center;
+}
+
+.counters-wrapper {
+    display: grid;
+    width: 100em;
+    
+}

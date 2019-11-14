@@ -12,10 +12,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
+import { Routes, RouterModule } from '@angular/router';
+import { MatMenuModule } from '@angular/material/menu';
+import { CounterCardComponent } from './counter-card/counter-card.component';
+
+
 
 @NgModule({
   declarations: [
@@ -23,7 +28,8 @@ import { ProfileComponent } from './profile/profile.component';
     CounterComponent,
     NavbarComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    CounterCardComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +43,7 @@ import { ProfileComponent } from './profile/profile.component';
     MatListModule,
     MatCardModule,
     HttpClientModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

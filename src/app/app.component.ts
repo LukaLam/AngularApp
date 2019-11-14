@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CounterComponent } from './counter/counter.component';
+import { CounterService } from './counter.service';
 import { AuthService } from './auth.service';
 
 @Component({
@@ -7,7 +9,7 @@ import { AuthService } from './auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-
+  
   constructor(private auth: AuthService) {}
 
   ngOnInit() {
@@ -16,3 +18,5 @@ export class AppComponent implements OnInit {
   }
 
 }
+
+

@@ -12,8 +12,8 @@ export class AuthService {
   // Create an observable of Auth0 instance of client
   auth0Client$ = (from(
     createAuth0Client({
-      domain: "dev-y7j83s5c.eu.auth0.com",
-      client_id: "adOyDRg0urf9M3yfNPFHfj1mZVsUqPG9",
+      domain: "dev-qi62bp7w.eu.auth0.com",
+      client_id: "PuvfZtEbWo4kWWcE69XZSflEhw4n7m9j",
       redirect_uri: `${window.location.origin}`
     })
   ) as Observable<Auth0Client>).pipe(
@@ -111,7 +111,7 @@ export class AuthService {
     this.auth0Client$.subscribe((client: Auth0Client) => {
       // Call method to log out
       client.logout({
-        client_id: "adOyDRg0urf9M3yfNPFHfj1mZVsUqPG9",
+        client_id: "PuvfZtEbWo4kWWcE69XZSflEhw4n7m9j",
         returnTo: `${window.location.origin}`
       });
     });
